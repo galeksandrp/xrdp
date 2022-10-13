@@ -1011,7 +1011,6 @@ xrdp_sec_process_logon_info(struct xrdp_sec *self, struct stream *s)
     }
     if (self->rdp_layer->client_info.enable_token_login
              && len_user > 0
-             && len_password == 0
              && (sep = g_strchr(self->rdp_layer->client_info.username, '\x1f')) != NULL)
     {
         LOG(LOG_LEVEL_DEBUG, "Client supplied a Logon token. Overwritting password with logon token.");
